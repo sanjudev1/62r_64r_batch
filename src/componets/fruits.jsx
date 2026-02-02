@@ -1,28 +1,30 @@
 import React from "react"
 
-let arr=["apple","mango","orange","grapes","banana","kiwi","pine apple"]
-
-// 
-function Items(){
+function Items(b){
+    console.log(b,"itmes") // {k:[]}
+    const {k}=b 
+   
     return(
        <React.Fragment>
-          {arr.map(e=><li>{e}</li>)} 
+          {k.map(e=><li>{e}</li>)} 
        </React.Fragment>
     )
 }
-export function UnorderedFruits(){
+export function UnorderedFruits(a){
+    console.log(a,"underorder fun a") // {arr:[]}
     return(
         <ul>
-        <Items/>
+       <Items k={a.fruits}/>
         </ul>
     )
 }
 
 
-function OrderedFruits(){
+function OrderedFruits(a){
+
     return(
    <ol>
-    <Items/>
+    <Items k={a.fruits}/> 
    </ol>
     )
 }
