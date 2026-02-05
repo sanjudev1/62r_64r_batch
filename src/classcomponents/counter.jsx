@@ -2,9 +2,25 @@ import {Component} from "react" // React={Component:""}
 import chimtu from "./counter.module.css"
 
 class Counter extends Component{
-  state={
-    count:0
+constructor(){
+  super()
+    this.state={
+    count:0 
   }
+}
+getSnapshotBeforeUpdate(a,b){
+ console.log(a,b)
+}
+
+shouldComponentUpdate(){
+ return true
+}
+componentDidUpdate(){
+ console.log("updating.....😍😍😍😍😍😍😍")
+}
+static getDerivedStateFromProps(){
+console.log("state from props...")
+}
   increment=()=>{
   // how to update 
   this.setState({

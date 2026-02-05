@@ -18,15 +18,17 @@ import App from './App.jsx'
 import Fetchproducts from './componets/fetchproducts.jsx'
 import Counter from './classcomponents/counter.jsx'
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+ 
+  <>
   <CustomNavbar/>
-    <Slider/>
+    {/* <Slider/> */}
     <Counter/>
     <Fetchproducts/>
+  </>
    
     
    
     
    
-  </StrictMode>,
+
 )
