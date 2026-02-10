@@ -17,13 +17,13 @@ import Slider from './classcomponents/customslider.jsx'
 import App from './App.jsx'
 import Fetchproducts from './componets/fetchproducts.jsx'
 import Counter from './classcomponents/counter.jsx'
+import CounterApp from './componets/counterapp.jsx'
+import Getproducts from './componets/getproducts.jsx'
 createRoot(document.getElementById('root')).render(
  
   <>
   <CustomNavbar/>
-    {/* <Slider/> */}
-    <Counter/>
-    <Fetchproducts/>
+  <Getproducts/>
   </>
    
     

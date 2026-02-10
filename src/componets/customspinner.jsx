@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Audio, DNA } from 'react-loader-spinner'
 
-export class DNASpinner extends React.Component {
-  componentWillUnmount(){
-    alert("spinner is expired...")
-  }
-  render(){
+export function DNASpinner () {
+  
+  useEffect(()=>{
+
+    return()=>{
+      console.log("spinner is expired this is clean up function")
+    }
+  },[])
     return (
    <DNA
 visible={true}
@@ -16,5 +19,5 @@ wrapperStyle={{}}
 wrapperClass="dna-wrapper"
 />
   )
-  }
+  
 }
