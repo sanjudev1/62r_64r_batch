@@ -19,11 +19,17 @@ import Fetchproducts from './componets/fetchproducts.jsx'
 import Counter from './classcomponents/counter.jsx'
 import CounterApp from './componets/counterapp.jsx'
 import Getproducts from './componets/getproducts.jsx'
+import Form from './componets/form.jsx'
 createRoot(document.getElementById('root')).render(
  
   <>
   <CustomNavbar/>
-  <Getproducts/>
+  <OrderedFruits>
+    {{fresh_costly_fruits:["apple","banana","orange"]}}
+  </OrderedFruits>
+  <Counter/>
+  <Form/>
+  {/* <Getproducts/> */}
   </>
    
     

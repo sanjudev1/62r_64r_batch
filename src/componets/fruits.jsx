@@ -5,7 +5,7 @@ function Items(b){
     const {k}=b 
    
     return(
-       <React.Fragment>
+       <React.Fragment >
           {k.map(e=><li>{e}</li>)} 
        </React.Fragment>
     )
@@ -21,10 +21,10 @@ export function UnorderedFruits(a){
 
 
 function OrderedFruits(a){
-
+    console.log(a.children.fresh_costly_fruits)
     return(
-   <ol>
-    <Items k={a.fruits}/> 
+   <ol style={{marginTop:"80px"}}>
+    <Items k={a.children.fresh_costly_fruits}/> 
    </ol>
     )
 }

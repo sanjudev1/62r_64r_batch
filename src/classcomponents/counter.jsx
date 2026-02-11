@@ -1,5 +1,6 @@
 import {Component} from "react" // React={Component:""}
 import chimtu from "./counter.module.css"
+import CounterOne from "./counter1"
 
 class Counter extends Component{
 constructor(){
@@ -39,6 +40,7 @@ console.log("state from props...")
      <button onClick={this.decrement}>decrement</button>
      <h2 >count : {this.state.count}</h2>
      <button onClick={this.increment}>increment</button>
+     <CounterOne/>
     </>)
   }
 }
