@@ -4,6 +4,7 @@
 
 import { useEffect, useState } from "react";
 import { DNASpinner } from "./customspinner";
+import { Link } from "react-router";
 
 function Getproducts(){
 
@@ -24,10 +25,10 @@ function Getproducts(){
        getrecipes()
     },[])
 
-    return(<div style={{marginTop:"60px"}}>
+    return(<div style={{}}>
     {data?<>
     
-    {data.map(e=><img style={{width:"250px"}}src={e.image}/>)}
+    {data.map(e=><Link to={`/recipe/${e.id}`}><img style={{width:"250px"}}src={e.image}/></Link>)}
     </>:<DNASpinner/>}
     </div>)
 }

@@ -1,6 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-
 import Sanju from './App.jsx'
 import Laptop from "./laptop.jsx"
 import {Toss as Mytoss} from './componets/onlinetoss.jsx'
@@ -20,16 +19,24 @@ import Counter from './classcomponents/counter.jsx'
 import CounterApp from './componets/counterapp.jsx'
 import Getproducts from './componets/getproducts.jsx'
 import Form from './componets/form.jsx'
+import {  BrowserRouter, Routes, Route  } from "react-router";
+import About from './componets/about.jsx'
+import Service from './componets/service.jsx'
+import Notfound from './componets/notfound.jsx'
+import Recipe from './componets/recipe.jsx'
 createRoot(document.getElementById('root')).render(
  
   <>
-  <CustomNavbar/>
-  <OrderedFruits>
-    {{fresh_costly_fruits:["apple","banana","orange"]}}
-  </OrderedFruits>
-  <Counter/>
-  <Form/>
-  {/* <Getproducts/> */}
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/service" element={<Service />} />
+      <Route path="/recipe/:id" element={<Recipe />} />
+      <Route path="*" element={<Notfound />} />
+    </Routes>
+  </BrowserRouter>,
+ 
   </>
    
     
