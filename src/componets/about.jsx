@@ -1,5 +1,6 @@
 import CustomNavbar from "../classcomponents/customnavbar"
 import Slider from "../classcomponents/customslider"
+import Ravi from "./ravi"
 
 function About(){
     return(
@@ -7,6 +8,7 @@ function About(){
         <CustomNavbar/>
         <Slider/>
         <h1>this is about page</h1>
+        <Ravi />
         </>
     )
 }

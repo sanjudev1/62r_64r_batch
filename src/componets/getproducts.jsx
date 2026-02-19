@@ -5,30 +5,20 @@
 import { useEffect, useState } from "react";
 import { DNASpinner } from "./customspinner";
 import { Link } from "react-router";
+import useFetch from "../customhooks/usefetch";
 
 function Getproducts(){
 
-   const[data,setdata]=useState("") // ["",fn]
-
-   const getrecipes=async()=>{
-      try{
-        let response= await fetch('https://dummyjson.com/recipes')
-       response= await response.json()
-       setdata(response.recipes)
-      }catch(err){
-        console.log(err)
-      }
-
-    }
-
-    useEffect(()=>{
-       getrecipes()
-    },[])
+    const data=useFetch("https://dummyjson.com/recipes")
+    
+  
+   
+  
 
     return(<div style={{}}>
     {data?<>
     
-    {data.map(e=><Link to={`/recipe/${e.id}`}><img style={{width:"250px"}}src={e.image}/></Link>)}
+    {data.recipes.map(e=><Link to={`/recipe/${e.id}`}><img style={{width:"250px"}}src={e.image}/></Link>)}
     </>:<DNASpinner/>}
     </div>)
 }

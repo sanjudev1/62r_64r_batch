@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { createContext, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Sanju from './App.jsx'
 import Laptop from "./laptop.jsx"
@@ -24,10 +24,14 @@ import About from './componets/about.jsx'
 import Service from './componets/service.jsx'
 import Notfound from './componets/notfound.jsx'
 import Recipe from './componets/recipe.jsx'
+export const Waiter1 = createContext();
+export const Waiter2 = createContext();
 createRoot(document.getElementById('root')).render(
  
   <>
-  <BrowserRouter>
+<Waiter1 value={{food:"Goongura mutton biryani rendu liverlu extra "}}>
+  <Waiter2 value={{deserts:"dilpasand apricort delight"}}>
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/about" element={<About />} />
@@ -36,6 +40,8 @@ createRoot(document.getElementById('root')).render(
       <Route path="*" element={<Notfound />} />
     </Routes>
   </BrowserRouter>,
+  </Waiter2>
+  </Waiter1>
  
   </>
    
