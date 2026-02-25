@@ -21,7 +21,7 @@ return (
             navbarScroll
           >
             <Nav.Link><Link to="/service">service</Link></Nav.Link>
-            <Nav.Link><Link to="/about">about</Link></Nav.Link>
+            <Nav.Link><Link to="/cart">cart</Link></Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
